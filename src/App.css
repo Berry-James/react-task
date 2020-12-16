@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.App {
+  font-family: 'Raleway', sans-serif;
+  background: #cc2b5e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  min-height: 100vh;
+  color: #fff;
+
+}
+
+label {
+  margin: 0;
+}
+
+.is-loading:before {
+  content: '';
+  background: #000000cc;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.is-loading:after {
+  content: 'Loading...';
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  color:white;
+  text-align:center;
+  font-weight:bold;
+  font-size:1.5rem;        
+}
+
+.main-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.todo-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+}
+
+.Form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Form button {
+  height: fit-content;
+  margin-left: 25px;
+}
+
+.add-project-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.1rem;
+}
+
+.add-project-wrapper button {
+  margin-left: 0;
+  margin-top: 25px;
+}
+
+
+.user-select {
+  min-width: 300px;
+  position: absolute;
+  
+}
+
+.add-project-wrapper input {
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  border-left: 5px solid transparent;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  margin-top: 10px;
+  transition: 0.2s;
+  background:rgba(221, 221, 221, 1)
+}
+
+.add-project-wrapper input:focus {
+  border-left: 5px solid rebeccapurple;
+
+}
+
+.add-modal-content {
+  margin: 15px 0px;
+}
+
+.add-project-wrapper {
+  padding: 1rem;
+}
+
+.add-modal-wrapper {
+  overflow-y:visible !important;
+}
+
+.MuiDialog-paper {
+  overflow-y: visible !important;
+}
+
+.todo-item {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 25px;
+  border-bottom: 1px solid #c0c0c0;
+  margin: 10px 0;
+}
+
+.todo-item h3 {
+  font-weight: normal;
+}
+
+.todo-list-headings {
+  display: grid;
+  grid-template-columns: 50% 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 25px;
+  margin-top: 25px;
+}
+
+.modal {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+.todo-list-headings p, a {
+  font-weight: bold;
+  margin: auto 0;
+  }
+
+.todo-list-headings a {
+  cursor: pointer;
+}
+
+.action-container button {
+  margin: 5px;
+}
+
+.is-complete {
+  filter: brightness(0.5);
+}
+
+.controls-wrapper {
+  display: grid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+/* 
+
+.user-input {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
